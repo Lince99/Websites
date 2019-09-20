@@ -47,9 +47,64 @@ html {
     padding: 2%;
 }
 
-.post {
+.post, .gallery {
     background-color: #ffffe6;
     margin: 2%;
 }
 
+.gallery table {
+	border-collapse: collapse;
+	width: 100%;
+}
 
+.gallery th, td {
+	padding: 1%;
+	max-width: 75%;
+}
+
+.gallery tr:nth-child(even) {
+	background-color: #ffe6b3;
+}
+
+.gallery img {
+	max-width: 150px;
+	height: auto;
+}
+
+.description span {
+	font-style: italic;
+	font-size: 15px;
+	text-shadow: 1px 1px 1px white;
+}
+
+.description {
+	width: 75%;
+}
+
+
+button {
+	background-color: #000066;
+	color: #ffe6b3;
+	padding: 15px 32px;
+	text-align: center;
+	font-weight: bold;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+
+button:hover {
+	background-color: #ffe6b3;
+	color: #000066;
+	border: 3px solid #000066;
+}
+
+.author {
+	color: red;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.footer a {
+	color: #000066;
+}
