@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!--Technical setup-->
+		<meta charset="utf-8"/>
+		<meta name = "viewport"
+		      content = "width=device-width, initial-scale=1.0">
+		<!--metadata about site-->
+		<meta name = "keywords" content = "calculator, calc"/>
+		<meta name = "description" content = "My simple JS calculator"/>
+		<meta name = "author" content = "Lince99"/>
+
+		<link href="calc.css" type="text/css" rel="stylesheet" media="screen" />
+
+		<title>Semplice calcolatrice in Javascript</title>
+		<!--Icon supported by mostly every browser-->
+		<link rel="icon"
+		      href="favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon"
+		      href="favicon.ico" type="image/x-icon" />
+
+		<script src="calc.js"></script>
+	</head>
+
+	<body>
+		<!--Main title-->
+		<div class = "header">
+			<h1>Calcolatrice</h1>
+		</div>
+
+		<!--Main page content-->
+		<div class = "content">
+			<div class = "description">
+				<p>Semplice alcolatrice con caselle di testo per l'input</p>
+			</div>
+			<div class = "calc">
+                <input type="text" id="val0" value="">
+				<input type="text" id="val1" value="">
+                <button type="button" onclick="somma()"> + </button>
+				<button type="button" onclick="sottrazione()"> - </button>
+				<button type="button" onclick="moltiplicazione()"> * </button>
+				<button type="button" onclick="divisione()"> / </button>
+                <br/>
+                <p class="result">Risultato = <span id="ris"></span></p>
+			</div>
+			<br/>
+			<div class = "description">
+				<p>Calcolatrice che eseguirà l'equazione
+					<b>a</b>x^2+<b>b</b>x+<b>c</b>
+				</p>
+			</div>
+			<div class = "calc">
+                <span>a</span>
+				<input type="text" id="eq0" value="">
+				<span>b</span>
+				<input type="text" id="eq1" value="">
+				<span>c</span>
+				<input type="text" id="eq2" value="">
+                <button type="button" onclick="equazione()"> Do something </button>
+                <br/>
+                <p class="result">Risultati =
+					<span id="ris_eq0"></span>
+					<span id="ris_eq1"></span>
+				</p>
+			</div>
+		</div>
+
+		<!--footer with copyright/left and legal info-->
+		<div class = "footer">
+			<h5>Created by: <span class = "author">Lince99</span></h5>
+			<p>This website is under GNU GPL3.<br/>
+				More info at:
+				<a href = "https://www.gnu.org/licenses/gpl.html">www.gnu.org</a>
+				or if you want site's files contact me!
+			</p>
+		</div>
+
+	</body>
+</html>

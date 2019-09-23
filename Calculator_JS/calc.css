@@ -1,0 +1,31 @@
+* {
+   /* border: 1px solid red;*/
+}
+
+body {
+    background-color: #fff0dd;
+    font-size: 15px;
+    color: #00002e;
+}
+
+.header {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff1313;
+    background-color: #fffafd;
+}
+
+.content {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.description {
+    text-align: center;
+    font-style: italic;
+}
+
+.footer {
+    background-color: #fffafd;
+    text-align: center;
+}
