@@ -8,6 +8,14 @@ body {
     color: #00002e;
 }
 
+button {
+    padding: 5px;
+    color: white;
+    text-align: center;
+    box-shadow: 1px 3px #888888;
+    background-color: #0000ff;
+}
+
 .header {
     font-size: 28px;
     font-weight: bold;
@@ -23,6 +31,20 @@ body {
 .description {
     text-align: center;
     font-style: italic;
+}
+
+.calc {
+    margin-top: 10px;
+    background-color: #ffff99;
+    margin-left: 10px;
+    padding: 1%;
+}
+
+.result {
+    background-color: #fff0dd;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .footer {
