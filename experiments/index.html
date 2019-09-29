@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <link href="index.css" type="text/css" rel="stylesheet" media="screen"/>
+        <title>Home page</title>
+    </head>
+    
+    <body onload="updateClock(); setInterval('updateClock()', 1000)">
+        <p>This is a simple page created by {{founderName}}</p>
+        <div class="section">
+            <ul>
+                {{nameList}}
+            </ul>
+        </div>
+        <div class="section">
+            <p id="clock" onclick="sayHi()">&nbsp;</p>
+            <script src="clock.js"></script>
+        </div>
+        <div class="menu">
+            <button onclick="showHide('dbButtons')">Modify</button>
+            
+            <div id="dbButtons" style="display: none">
+                <button class="modifiers" onclick="showHide('addForm')">Add</button>
+                <form id="addForm" class="input" action="index.php" method="post" style="display: none">
+                    <p>Name:   <input type="text" name="name"/></p>
+                    <p>Surame: <input type="text" name="surname"/></p>
+                    <input id="submit" type="submit" name="addData" value="Submit" />
+                </form>
+                <form action="index.php" method="post">
+                    <input class="modifiers" type="submit" name="readData" value="Read" /><br>
+                    <input class="modifiers" type="submit" name="dropAll" value="Drop"/>
+                </form>
+            </div>
+        </div>
+        <div class="dbLog">
+            {{dbLog}}
+        </div>
+        <div class="gallery">
+            <a target="_blank" href="images/Tux.png">
+                <img src="images/Tux.png" alt="Tux">
+            </a>
+            <a target="_blank" href="images/Tux.png">
+                <img src="images/Tux.png" alt="Tux">
+            </a>
+            <a target="_blank" href="images/Tux.png">
+                <img src="images/Tux.png" alt="Tux">
+            </a>
+            <a target="_blank" href="images/Tux.png">
+                <img src="images/Tux.png" alt="Tux">
+            </a>
+        </div>
+        <div class="footer">
+            <a href="initial/home.php">Test website</a>
+        </div>
+    </body>
+</html>
+

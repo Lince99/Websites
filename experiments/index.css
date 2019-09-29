@@ -1,0 +1,327 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+html {
+    background-color: #efefef;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p {
+    padding: 1px;
+    border-width: 0px;
+    border-style: solid;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    padding-bottom: 2px;
+    border-color: #ff0000;
+}
+
+ul {
+    list-style-type: square;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    padding-bottom: 1%;
+    border-top-width: 0px;
+    border-top-style: solid;
+    padding-top: 5px;
+}
+
+li {
+    background-color: #afafaf;
+    color: white;
+    padding-left: 5px;
+    padding-bottom: 2px;
+    border: 1px solid #acacac;
+}
+
+.section {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#clock {
+    font-family: "Lucida Console", Monaco, monospace;
+    color: #00ff00;
+    background-color: #000000;
+}
+
+.menu {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 1%;
+    background-color: #000000;
+}
+
+.menu input, button {
+    border: 1px solid #cc0000;
+    margin: 2px;
+}
+
+.menu input:hover, button:hover {
+    color: #cc0000;
+}
+
+#dbButtons {
+    margin-left: 2%;
+}
+
+#addForm {
+    margin-left: 2%;
+}
+
+#addForm p {
+    color: #00ff00;
+    padding-bottom: none;
+    margin-bottom: none;
+}
+
+#submit {
+    margin-left: 42%;
+    width: 10%;
+    border-style: groove;
+    border-width: 3px;
+}
+
+
+.modifiers {
+    min-width: 200px;
+    text-align: center !important;
+}
+
+.dbLog {
+    font-size: 10px;
+    font-family: "Lucida Console", Monaco, monospace;
+    background-color: #000000;
+    color: #00ff00;
+    padding: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 1px solid #ff0000;
+}
+
+.gallery {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border: 1px solid #ff0000;
+}
+
+.gallery img {
+    margin: 5px;
+    width: 200px;
+    height: auto;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+img:hover {
+    box-shadow: 0 0 2px 1px #b3d1ff;
+}
+
+.footer {
+    color: #ffffff;
+    /*position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;*/
+    margin-top: 0.5%;
+    padding: 1%;
+    background-color: #000000;
+    text-align: center;
+}
+
+ /* unvisited link */
+.footer a:link, {
+    color: #ffffff;
+}
+
+/* visited link */
+.footer a:visited {
+    color: #808080;
+}
+
+/* mouse over link */
+.footer a:hover {
+    color: #cc0000;
+}
+
+/* selected link */
+.footer a:active {
+    color: #0040ff;
+} 
+
+@media only sceen and (max-width:320px) {
+    #dbButtons, #submit, #addForm, .menu, .dbLog {
+        margin-left: 0px;
+    }
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+html {
+    background-color: #efefef;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p {
+    padding: 1px;
+    border-width: 0px;
+    border-style: solid;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    padding-bottom: 2px;
+    border-color: #ff0000;
+}
+
+ul {
+    list-style-type: square;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    padding-bottom: 1%;
+    border-top-width: 0px;
+    border-top-style: solid;
+    padding-top: 5px;
+}
+
+li {
+    background-color: #afafaf;
+    color: white;
+    padding-left: 5px;
+    padding-bottom: 2px;
+    border: 1px solid #acacac;
+}
+
+.section {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#clock {
+    font-family: "Lucida Console", Monaco, monospace;
+    color: #00ff00;
+    background-color: #000000;
+}
+
+.menu {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 1%;
+    background-color: #000000;
+}
+
+.menu input, button {
+    border: 1px solid #cc0000;
+    margin: 2px;
+}
+
+.menu input:hover, button:hover {
+    color: #cc0000;
+}
+
+#dbButtons {
+    margin-left: 2%;
+}
+
+#addForm {
+    margin-left: 2%;
+}
+
+#addForm p {
+    color: #00ff00;
+    padding-bottom: none;
+    margin-bottom: none;
+}
+
+#submit {
+    margin-left: 42%;
+    width: 10%;
+    border-style: groove;
+    border-width: 3px;
+}
+
+
+.modifiers {
+    min-width: 200px;
+    text-align: center !important;
+}
+
+.dbLog {
+    font-size: 10px;
+    font-family: "Lucida Console", Monaco, monospace;
+    background-color: #000000;
+    color: #00ff00;
+    padding: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 1px solid #ff0000;
+}
+
+.gallery {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border: 1px solid #ff0000;
+}
+
+.gallery img {
+    margin: 5px;
+    width: 200px;
+    height: auto;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+img:hover {
+    box-shadow: 0 0 2px 1px #b3d1ff;
+}
+
+.footer {
+    color: #ffffff;
+    /*position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;*/
+    margin-top: 0.5%;
+    padding: 1%;
+    background-color: #000000;
+    text-align: center;
+}
+
+ /* unvisited link */
+.footer a:link, {
+    color: #ffffff;
+}
+
+/* visited link */
+.footer a:visited {
+    color: #808080;
+}
+
+/* mouse over link */
+.footer a:hover {
+    color: #cc0000;
+}
+
+/* selected link */
+.footer a:active {
+    color: #0040ff;
+} 
+
+@media only sceen and (max-width:320px) {
+    #dbButtons, #submit, #addForm, .menu, .dbLog {
+        margin-left: 0px;
+    }
+}
+
