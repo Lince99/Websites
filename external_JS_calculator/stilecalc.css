@@ -1,0 +1,34 @@
+* {
+   /* border: 1px solid red;*/
+}
+
+body {
+    background-color: #fff0dd;
+    font-size: 15px;
+    color: #00002e;
+}
+
+button {
+    padding: 5px;
+    color: white;
+    text-align: center;
+    box-shadow: 1px 3px #888888;
+    background-color: #0000ff;
+}
+
+.header {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff1313;
+    background-color: #fffafd;
+}
+
+.content {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.footer {
+    background-color: #fffafd;
+    text-align: center;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Calcolatrice</title>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<link href="stilecalc.css" type="text/css" rel="stylesheet" media="screen" />
+		<script src="funzioni.js"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<h1>Calcolatrice con caselle di testo per input</h1>
+		</div>
+		<div class="content">
+			<!-- Creo una casella di testo "text", la chiamo "valore1" e la
+			   inizializzo con il valore 0 -->
+			<p>
+			Primo valore: <input type="text" id="valore1" value="0">
+			<!-- Creo una casella di testo "text", la chiamo "valore2" e la
+			   inizializzo con il valore 0 -->
+			Secondo valore: <input type="text" id="valore2" value="0">
+			</p>
+			<!-- Creo un bottone che visualizza un + e specifico che al momento
+			del click deve eseguire la funzione/blocco chiamata somma -->
+			<div class="buttons">
+				<button onclick="somma()">+</button>
+				<button onclick="sottrazione()">-</button>
+				<button onclick="divisione()">/</button>
+				<button onclick="moltiplicazione()">*</button>
+				<button onclick="potenza()">**</button>
+				<button onclick="arrotonda()">.x</button>
+				<button onclick="radice_quadrata()">2v"</button>
+			</div>
+			<br>Risultato:<input type="text" id="risultato" value=""> </br>
+		</div>
+		<div class="footer">
+			Copyright: none
+		</div>
+	</body>
+</html>
