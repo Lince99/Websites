@@ -58,7 +58,10 @@ function divisione() {
 
 function potenza() {
     get_values();
-    risultato = Math.pow(a,b);
+    if(a == 0 && b == 0)
+		risultato = "Undefined";
+	else
+		risultato = Math.pow(a,b);
     document.getElementById('risultato').value = risultato;
     risultato = "";
 }
