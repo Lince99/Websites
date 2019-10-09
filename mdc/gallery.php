@@ -1,16 +1,16 @@
-<?php
+<!--<?php
     require_once("config.php");
     
     /*connect to db*/
-    try {
+    /*try {
 		$conn = new PDO("mysql:host=$db_server;dbnamee=$db_database", $db_username, $db_password);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	} catch(PDOException $e) {
 		$error .= "Connection failed: ".$e->getMessage();
-	}
+	}*/
 	/*close connection*/
     //$conn = null;
-?>
+?>-->
 
 <!DOCTYPE html>
 <html lang="it" dir="ltr">
@@ -35,7 +35,7 @@
                     <ul class="pc_list">
                         <?php
                             /*get manufacturer list that has produced pcs*/
-                            $query_manufacturer_list = "SELECT name FROM Product WHERE Type_ID = 1;";
+                            //$query_manufacturer_list = "SELECT name FROM Product WHERE Type_ID = 1;";
                             /*get */
                             /*execute list query*/
                             /*parse query results to html*/
