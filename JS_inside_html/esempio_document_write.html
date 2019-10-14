@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+	<style media="screen">
+		/** {
+			margin: 0 auto;
+		}
+		tr:nth-child(odd) td:nth-child(even), tr:nth-child(even) td:nth-child(odd) {
+			color: red;
+		}*/
+	</style>
+	<!--
+Con Javascript è possibile utilizzare la funzione document.write
+per generare output all'interno del body: testo, tag html, contenuto di variabili.
+
+Dopo avere testato e sperimentato il funzionamento del file allegato,
+svolgere i seguenti esercizi:
+
+1) generare la successione di Fibonacci separando i valori con uno spazio
+
+2) generare la tavola Pitagorica con ampiezza ricevuta in input dall'utente,
+inserendo i valori in celle di una tabella (eventualmente aggiungere
+anche le celle di intestazione per il numero di riga e il numero di colonna)
+-->
+	<script>
+		function StampaTabella(r, c)
+		{
+		  document.write("<table border=\"1\">");
+		  for (riga = 0; riga < r; riga ++)
+		  {
+			document.write("<tr>"); // scrivo il tag di apertura riga
+		    for (colonna = 0; colonna < c; colonna ++)
+		      document.write("<td>cella" + riga + ", " + colonna + "</td>");
+		    document.write("</tr>"); // scrivo il tag per chiusura riga
+		  }
+		  document.write("</table>");  // chiudo il tag table
+		}
+		function fibonacci(count) {
+			var i = 0;
+			var b, c;
+			document.write("<p>");
+			document.write(i+" ");
+			for(var i = 1; i < count; i++) {
+				c = i;
+				i = b;
+				b = c;
+				i++;
+				document.write(i+" ");
+			}
+			document.write("</p>");
+		}
+		function pitagora(maxa, maxb) {
+			var a = 0;
+			var b = 0;
+
+			//TODO: add chess colors
+			document.write("<table>");
+			for (var i = 1; i < maxa+1; i++) {
+				if(i%2 == 0)
+					document.write("<tr style=\"background-color: red;\">");
+				else
+					document.write("<tr style=\"background-color: white;\">");
+
+				for (var j = 1; j < maxb+1; j++) {
+					if(j%2 != 0)
+						document.write("<td style=\"background-color: red;\">");
+					else
+						document.write("<td style=\"background-color: white;\">");
+					document.write("<td>"+(i*j)+"</td>");
+				}
+				document.write("</tr>");
+			}
+			document.write("</table>");
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<h1>Esempio di output con tag html prodotti con document.write</h1>
+		<script>
+			// inserire lo script all'interno del body nel punto in cui si
+			// vuole generare l'output
+			var nRighe= 12;
+			var nColonne= 4;
+
+			document.write("Esempio di tabella generata dinamicamente");
+			StampaTabella(nRighe, nColonne);
+			document.write("<br/>");
+			document.write("Dimensioni tabella: " + nRighe + ", " + nColonne);
+		</script>
+	</div>
+
+	<div>
+		<h1>Sequenza di fibonacci</h1>
+		<p>Inserisci il numero di righe per stampare la sequenza:</p>
+		<input type="text" id="fibval" value="0"></input>
+		<button type="button" onclick="fibonacci()"></button>
+		<br/>
+
+		<script>
+			var nfib = 10;
+			nfib = eval(document.getElementById('fibval').value);
+
+			document.write("<p>Sequenza di fibonacci:</p>");
+			fibonacci(nfib);
+			document.write("<br/>");
+		</script>
+	</div>
+
+	</div>
+		<h1>Tavola pitagorica</h1>
+		<br/>
+		<script>
+			var row = 5;
+			var col = 5;
+			pitagora(row, col);
+		</script>
+	</div>
+
+</body>

@@ -11,7 +11,7 @@
     </head>
     <body>
         <div class="navbar">
-            <a href="#" class="btn active">Home</a><a href="gallery.php" class="btn">Galleria</a><a href="story.php" class="btn">Storia</a><a href="contacts.php" class="btn">Contatti</a>
+            <a href="#" class="btn active">Home</a><a href="gallery.php" class="btn">Galleria</a><a href="news.php" class="btn">News</a><a href="contacts.php" class="btn">Contatti</a>
         </div>
         <div class="logo">
             <img src="logo_minified.svg" alt="Logo mdc">
@@ -19,13 +19,11 @@
         <div class="section">
             <div class="article">
                 <div class="title">
-                    Introduzione
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </div>
                 <div class="content">
                     <p>
-                        Hello world!<br>
-                        Benvenuti nel sito ufficiale del Museo del Computer.<br>
-                        Qui avrete la possibilità di dare uno sguardo a quello che offriamo al pubblico e come prenotare una visita guidata. 
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
                 </div>
             </div>
@@ -35,11 +33,9 @@
                 </div>
                 <div class="content">
                     <p>
-                        Noi siamo il Museo del Computer dell'Itis E. Fermi di Bassano del Grappa.<br>
-                        Questo posto viene interamente gestito da studenti ed ex-studenti di questa scuola, affiancati da un professore responsabile e supportati dall'amministrazione della scuola.<br>
-                        I volontari provengono da qualsiasi indirizzo presente a scuola, poichè la cosa più importante che ci unisce è la passione per il computer e la tecnologia d'altri tempi.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
-                    <img src="foto_gruppo.png" alt="foto di gruppo">
+                    <img src="logo_combined.svg" alt="Logo mdc">
                 </div>
             </div>
             <div class="article">
@@ -48,7 +44,7 @@
                 </div>
                 <div class="content">
                     <p>
-                        Dedichiamo il nostro tempo libero alla riparazione, pulizia e prova di apparecchiature elettroniche o persino meccaniche come le macchine da scrivere e la calcolatrici elettromeccaniche Olivetti che hanno fatto parte della storia Italiana.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
                 </div>
             </div>
