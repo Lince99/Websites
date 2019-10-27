@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <!--Technical setup-->
+		<meta charset="utf-8"/>
+		<meta name = "viewport"
+		      content = "width=device-width, initial-scale=1.0">
+		<!--metadata about site-->
+		<meta name = "keywords" content = "calculator, calc"/>
+		<meta name = "description" content = "Seguendo la guida all'indirizzo https://www.w3schools.com/css/css_form.asp applicare degli stili opportuni all'applicazione per la soluzione delle equazioni di secondo grado"/>
+
+		<link href="check.css" type="text/css" rel="stylesheet" media="screen" />
+
+		<title>Semplice calcolatrice in Javascript con input personalizzato</title>
+
+		<script src="check.js"></script>
+    </head>
+    <body>
+		<!--Main title-->
+		<div class = "header">
+			<h1>Calcolatrice</h1>
+		</div>
+
+		<!--Main page content-->
+		<div class = "content">
+			<div class = "description">
+				<p>Calcolatrice che eseguirà l'equazione
+					<b>a</b>x^2+<b>b</b>x+<b>c</b>
+				</p>
+			</div>
+			<div class = "calc">
+                <label>a = </label>
+				<input type="text" id="eq0" value="0">
+				<label>b = </label>
+				<input type="text" id="eq1" value="0">
+				<label>c = </label>
+				<input type="text" id="eq2" value="0">
+                <button type="button" onclick="equazione()"> Calcola </button>
+                <br/>
+                <p class="result">Risultati =
+					<span id="ris_eq0"></span>
+					<span id="ris_eq1"></span>
+				</p>
+			</div>
+		</div>
+
+		<!--footer with copyright/left and legal info-->
+		<div class = "footer">
+			<h5>Created by: <span id="author">Basso Nicola</span></h5>
+			<p>This website is under GNU GPLv3.<br/>
+				More info at:
+				<a href = "https://www.gnu.org/licenses/gpl.html">www.gnu.org</a><br>
+			</p>
+		</div>
+
+	</body>
+</html>

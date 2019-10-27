@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <!--Technical setup-->
+		<meta charset="utf-8"/>
+		<meta name = "viewport"
+		      content = "width=device-width, initial-scale=1.0">
+		<!--metadata about site-->
+		<meta name = "keywords" content = "calculator, calc"/>
+		<meta name = "description" content = "Seguendo la guida al seguente indirizzo https://www.w3schools.com/html/html_form_input_types.asp sviluppare una pagina html per testare in serie tutti gli elementi di input presentati. In seguito, aggiungere il codice necessario per la validazione dei dati che si trova negli esempi illustrati all'indirizzo https://www.the-art-of-web.com/html/html5-form-validation/"/>
+
+		<title>Controllo Input in JS</title>
+
+		<script src="check_input.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Test delle varie tipologie di input</h1>
+        </div>
+        <div class="content">
+            <form class="all" action="index.html" method="post">
+                <h2>Buttons</h2>
+                <form class="buttons" action="index.html" method="post">
+                    <p> button </p>
+                    <input type="button" value="a">
+                    <input type="button" value="b">
+                    <input type="button" value="c">
+                    <p> checkbox </p>
+                    <input type="checkbox"> a
+                    <input type="checkbox"> b
+                    <input type="checkbox"> c
+                    <p> radio </p>
+                    <input type="radio"> a
+                    <input type="radio"> b
+                    <input type="radio"> c
+                    <p> submit </p>
+                    <input type="submit" value="Submit">
+                    <p> reset </p>
+                    <input type="reset" value="Reset">
+                </form>
+                <hr>
+                <h2>Texts</h2>
+                <form class="texts" action="index.html" method="post">
+                    <p> datetime-local </p>
+                    <input type="datetime-local">
+                    <p> email </p>
+                    <input type="email" required placeholder="Enter a valid email address">
+                    <p> month </p>
+                    <input type="month" min="1" max="12" value="1">
+                    <p> number </p>
+                    <input type="number" min="18" max="99" value="18">
+                    <p> password </p>
+                    <input type="password">
+                    <p> url </p>
+                    <input type="url" required pattern="https?://.+" value="https://www.example.example">
+                    <p> week </p>
+                    <input type="week" min="1" max="12">
+                    <p> tel </p>
+                    <input type="tel">
+                    <p> text </p>
+                    <input type="text" value="Some random text" readonly>
+                    <p> search </p>
+                    <input type="search" value="Search something">
+                    <p> submit </p>
+                    <input type="submit" value="Submit">
+                    <p> reset </p>
+                    <input type="reset" value="Reset">
+                </form>
+                <hr>
+                <h2>Ranges</h2>
+                <form class="ranges" action="index.html" method="post">
+                    <p> date </p>
+                    <input type="date">
+                    <p> color </p>
+                    <input type="color">
+                    <p> file </p>
+                    <input type="file">
+                    <p> hidden </p>
+                    <input type="hidden">
+                    <p> image </p>
+                    <input type="image">
+                    <p> range </p>
+                    <input type="range" min="1" max="5" value="3">
+                    <p> time </p>
+                    <input type="time">
+                    <p> submit </p>
+                    <input type="submit" value="Submit">
+                    <p> reset </p>
+                    <input type="reset" value="Reset">
+                </form>
+            </form>
+        </div>
+        <div class="footer">
+
+        </div>
+    </body>
+</html>
