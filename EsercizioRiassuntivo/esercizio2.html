@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Esercizio 2: Dati neolavoratore</title>
+    </head>
+    <body>
+        <div class="header">
+            <div class="title">
+                <h2>Dati Neolavoratore</h2>
+            </div>
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="esercizio1.html">Esercizio 1</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="subcontent">
+                <div class="title">
+                    <p>Inserisci i dati del neolavoratore</p>
+                </div>
+                <div class="user_input">
+                    <form class="" action="" method="post">
+                        <div class="input_text">
+                            <span>Nome e Cognome</span>
+                            <input type="text" name="cognome" value="Inserire il proprio nome e cognome..." max="50" maxlength="50">
+                        </div>
+                        <div class="input_radio">
+                            <span>Sesso</span>
+                            <input type="radio" name="sesso" value="M">M
+                            <input type="radio" name="sesso" value="F">F
+                            <input type="radio" name="sesso" value="Altro">Altro
+                        </div>
+                        <div class="input_menu">
+                            <span>Ateneo</span>
+                            <select name="ateneo">
+                                <option value="nessuno" selected></option>
+                                <option value="sapienza">La Sapienza</option>
+                                <option value="torvergata">Tor Vergata</option>
+                                <option value="romatre">Roma Tre</option>
+                            </select>
+                        </div>
+                        <div class="input_text">
+                            <span>Email</span>
+                            <input type="email" name="email" value="example@example.com" max="30" maxlength="30">
+                        </div>
+                        <div class="input_text">
+                            <span>Telefono</span>
+                            <input type="text" name="telefono" value="1234567890" max="15" maxlength="15">
+                        </div>
+                        <div class="input_text">
+                            <span>Richieste particolari</span>
+                            <textarea name="richieste" rows="12" cols="60"></textarea>
+                        </div>
+                        <div class="confirm">
+                            <input type="submit" name="submit">
+                            <input type="reset" name="reset">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="error">
+                <p id="error_output">&nbsp;</p>
+            </div>
+        </div>
+        <div class="footer">
+            Copyright (C) Basso Nicola 2019 <br>
+            This website is under GNU GPLv3.
+        </div>
+    </body>
+</html>
