@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Esercizio 1: Dati studente</title>
+    </head>
+    <body>
+        <div class="header">
+            <div class="title">
+                <h2>Dati Studente</h2>
+            </div>
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="esercizio2.html">Esercizio 2</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="subcontent">
+                <div class="title">
+                    <p>Inserisci i dati dello studente</p>
+                </div>
+                <div class="user_input">
+                    <form class="" action="" method="post">
+                        <div class="input_text">
+                            <span>Cognome</span>
+                            <input type="text" name="cognome" value="Inserire il proprio cognome..." max="30" maxlength="30">
+                        </div>
+                        <div class="input_text">
+                            <span>Nome</span>
+                            <input type="text" name="nome" value="Inserire il proprio nome..." max="30" maxlength="30">
+                        </div>
+                        <div class="input_text">
+                            <span>Matricola</span>
+                            <input type="text" name="matricola" value="Matricola" max="12" maxlength="12">
+                        </div>
+                        <div class="input_menu">
+                            <span>Regione di residenza</span>
+                            <select name="regione">
+                                <option value="nessuna" selected></option>
+                                <option value="valdaosta">Val d&#96;Aosta</option>
+                                <option value="piemonte">Piemonte</option>
+                                <option value="liguria">Liguria</option>
+                                <option value="lombardia">Lombardia</option>
+                                <option value="veneto">Veneto</option>
+                                <option value="trentino">Trentino Alto Adige</option>
+                                <option value="friuli">Friuli Venezia-Giulia</option>
+                                <option value="emilia">Emilia-Romagna</option>
+                                <option value="toscana">Toscana</option>
+                                <option value="marche">Marche</option>
+                                <option value="umbria">Umbria</option>
+                                <option value="lazio">Lazio</option>
+                                <option value="abruzzo">Abruzzo</option>
+                                <option value="molise">Molise</option>
+                                <option value="campania">Campania</option>
+                                <option value="basilicata">Basilicata</option>
+                                <option value="puglia">Puglia</option>
+                                <option value="calabria">Calabria</option>
+                                <option value="sicilia">Sicilia</option>
+                                <option value="sardegna">Sardegna</option>
+                            </select>
+                        </div>
+                        <div class="input_text">
+                            <span>Email</span>
+                            <input type="email" name="email" value="example@example.com" max="30" maxlength="30">
+                        </div>
+                        <div class="input_text">
+                            <span>Telefono</span>
+                            <input type="text" name="telefono" value="1234567890" max="15" maxlength="15">
+                        </div>
+                        <div class="input_text">
+                            <span>Richieste particolari</span>
+                            <textarea name="richieste" rows="12" cols="60"></textarea>
+                        </div>
+                        <div class="confirm">
+                            <input type="submit" name="submit">
+                            <input type="reset" name="reset">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="error">
+                <p id="error_output">&nbsp;</p>
+            </div>
+        </div>
+        <div class="footer">
+            Copyright (C) Basso Nicola 2019 <br>
+            This website is under GNU GPLv3.
+        </div>
+    </body>
+</html>
