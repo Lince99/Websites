@@ -3,6 +3,50 @@
     <head>
         <meta charset="utf-8">
         <title>Esercizio 2: Dati neolavoratore</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" language="javascript">
+            var valoreSesso=null;
+            function controllaCAP() {
+                if (document.es2.cap.value.length!=5) {
+                    alert("Il CAP deve contenere 5 cifre");
+                    return false;
+                }
+                var v=parseInt(document.es2.cap.value);
+                if (isNaN(v)) {
+                    alert("Il CAP deve essere un numero");
+                    return false;
+                }
+                return true;
+            }
+            function controllaNome() {
+                var v=parseInt(document.es2.nome.value);
+                if (!isNaN(v)) {
+                    alert("Il cognome e nome non pu&ograve; essere un numero");
+                    return false;
+                }
+                return true;
+            }
+            function validaInvio() {
+                if (document.es2.nome.value=="") {
+                    alert("Inserire cognome e nome");
+                    return false;
+                }
+                if (valoreSesso==null) {
+                    alert("Selezionare il sesso");
+                    return false;
+                }
+                if (document.es2.ateneo.value=="nessuno") {
+                    alert("Selezionare un ateneo");
+                    return false;
+                }
+                if ((document.es2.lavoratore.checked)&&(document.es2.descr.value=="")) {
+                    alert("Hai dichiarato di essere uno studente lavoratore: devi compilare il campo descrizione lavoro");
+                    return false;
+                }
+                alert("Dati inseriti correttamente");
+                return true;
+            }
+        </script>
     </head>
     <body>
         <div class="header">
@@ -20,16 +64,16 @@
                     <p>Inserisci i dati del neolavoratore</p>
                 </div>
                 <div class="user_input">
-                    <form class="" action="" method="post">
+                    <form class="" action="" method="post" name="es2" onSubmit="return validaInvio();">
                         <div class="input_text">
                             <span>Nome e Cognome</span>
-                            <input type="text" name="cognome" value="Inserire il proprio nome e cognome..." max="50" maxlength="50">
+                            <input type="text" name="nome" value="Inserire il proprio nome e cognome..." size="50" maxlength="50" onChange="return controllaNome();" onclick="this.value='';">
                         </div>
                         <div class="input_radio">
                             <span>Sesso</span>
-                            <input type="radio" name="sesso" value="M">M
-                            <input type="radio" name="sesso" value="F">F
-                            <input type="radio" name="sesso" value="Altro">Altro
+                            <input type="radio" name="sesso" value="M" onClick="valoreSesso=this.value;">M
+                            <input type="radio" name="sesso" value="F" onClick="valoreSesso=this.value;">F
+                            <input type="radio" name="sesso" value="Altro" onClick="valoreSesso=this.value;">Altro
                         </div>
                         <div class="input_menu">
                             <span>Ateneo</span>
@@ -41,16 +85,16 @@
                             </select>
                         </div>
                         <div class="input_text">
-                            <span>Email</span>
-                            <input type="email" name="email" value="example@example.com" max="30" maxlength="30">
+                            <span>CAP</span>
+                            <input type="text" name="cap" value="12345" size="5" maxlength="5" onclick="this.value='';">
                         </div>
                         <div class="input_text">
-                            <span>Telefono</span>
-                            <input type="text" name="telefono" value="1234567890" max="15" maxlength="15">
+                            <span>Lavoratore</span>
+                            <input type="checkbox" name="lavoratore">
                         </div>
                         <div class="input_text">
-                            <span>Richieste particolari</span>
-                            <textarea name="richieste" rows="12" cols="60"></textarea>
+                            <span>Descrizione lavoro</span>
+                            <input type="text" name="descr" size="80" maxlength="80" value="Cose svolte..." onclick="this.value='';">
                         </div>
                         <div class="confirm">
                             <input type="submit" name="submit">

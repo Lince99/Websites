@@ -3,6 +3,38 @@
     <head>
         <meta charset="utf-8">
         <title>Esercizio 1: Dati studente</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" language="javascript">
+            function validaForm() {
+                if (document.es1.cognome.value=="") {
+                    alert("Inserire cognome");
+                    return false;
+                }
+                if (document.es1.nome.value=="") {
+                    alert("Inserire nome");
+                    return false;
+                }
+                if (document.es1.matricola.value=="") {
+                    alert("Inserire matricola");
+                    return false;
+                }
+                var v=parseInt(document.es1.matricola.value);
+                if (isNaN(v)) {
+                    alert("La matricola deve essere un numero");
+                    return false;
+                }
+                if (document.es1.regione.value=="nessuna") {
+                    alert("Selezionare una regione");
+                    return false;
+                }
+                if ((document.es1.email.value=="")&&(document.es1.telefono.value=="")) {
+                    alert("Inserire o l’email o il numero di telefono");
+                    return false;
+                }
+                alert("Dati inseriti correttamente");
+                return true;
+            }
+        </script>
     </head>
     <body>
         <div class="header">
@@ -20,18 +52,18 @@
                     <p>Inserisci i dati dello studente</p>
                 </div>
                 <div class="user_input">
-                    <form class="" action="" method="post">
+                    <form class="" action="" method="post" name="es1" onsubmit="return validaForm();">
                         <div class="input_text">
                             <span>Cognome</span>
-                            <input type="text" name="cognome" value="Inserire il proprio cognome..." max="30" maxlength="30">
+                            <input type="text" name="cognome" value="Inserire il proprio cognome..." max="30" maxlength="30" onclick="this.value='';">
                         </div>
                         <div class="input_text">
                             <span>Nome</span>
-                            <input type="text" name="nome" value="Inserire il proprio nome..." max="30" maxlength="30">
+                            <input type="text" name="nome" value="Inserire il proprio nome..." max="30" maxlength="30" onclick="this.value='';">
                         </div>
                         <div class="input_text">
                             <span>Matricola</span>
-                            <input type="text" name="matricola" value="Matricola" max="12" maxlength="12">
+                            <input type="text" name="matricola" value="Matricola" max="12" maxlength="12" onclick="this.value='';">
                         </div>
                         <div class="input_menu">
                             <span>Regione di residenza</span>
@@ -61,15 +93,15 @@
                         </div>
                         <div class="input_text">
                             <span>Email</span>
-                            <input type="email" name="email" value="example@example.com" max="30" maxlength="30">
+                            <input type="email" name="email" value="example@example.com" max="30" maxlength="30" onclick="this.value='';">
                         </div>
                         <div class="input_text">
                             <span>Telefono</span>
-                            <input type="text" name="telefono" value="1234567890" max="15" maxlength="15">
+                            <input type="text" name="telefono" value="1234567890" max="15" maxlength="15" onclick="this.value='';">
                         </div>
                         <div class="input_text">
                             <span>Richieste particolari</span>
-                            <textarea name="richieste" rows="12" cols="60"></textarea>
+                            <textarea name="richieste" rows="12" cols="60" onclick="this.value='';"></textarea>
                         </div>
                         <div class="confirm">
                             <input type="submit" name="submit">

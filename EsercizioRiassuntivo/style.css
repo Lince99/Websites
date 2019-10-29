@@ -1,0 +1,37 @@
+/*COLORS:
+    BACKGROUND
+#d5f4e6
+    HEADER/FOOTER
+#80ced6
+    CONTENT
+#fefbd8
+    TEXT
+#618685
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: #d5f4e6;
+    color: #618685;
+}
+
+.header {
+    background-color: #80ced6;
+    color: #fefbd8;
+    margin-bottom: 2em;
+}
+
+.content {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.footer {
+    background-color: #80ced6;
+    color: #fefbd8;
+}
