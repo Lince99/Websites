@@ -20,10 +20,25 @@ body {
     color: #618685;
 }
 
+a {
+    text-decoration: none;
+    color: #618685;
+    font-weight: bold;
+    background-color: #d5f4e6;
+    padding: 0.3em;
+    margin-left: 0.2em;
+}
+
 .header {
     background-color: #80ced6;
     color: #fefbd8;
     margin-bottom: 2em;
+}
+
+.menu {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 0.2em solid #618685;
 }
 
 .content {
