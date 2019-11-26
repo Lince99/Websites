@@ -15,8 +15,7 @@ CREATE TABLE 191125_posizione (
 	latitudine DOUBLE,
 	longitudine DOUBLE,
 	PRIMARY KEY (veicolo, data_ora),
-	FOREIGN KEY (veicolo) REFERENCES 191125_veicolo (targa)
-		ON DELETE CASCADE
+	FOREIGN KEY (veicolo) REFERENCES 191125_veicolo (targa) ON DELETE CASCADE
 );
 
 
@@ -40,11 +39,11 @@ UPDATE 191125_veicolo
 	SET descrizione = 'Autocisterna'
 	WHERE targa = 'ABC1234';
 
-UPDATE 191125_veicolo 
+UPDATE 191125_veicolo
     SET descrizione = 'Tir'
     WHERE targa = 'DB78AD2';
 
-UPDATE 191125_veicolo 
+UPDATE 191125_veicolo
     SET descrizione = 'Bicicletta'
     WHERE targa = '1234AAA';
 
@@ -54,7 +53,7 @@ INSERT INTO 191125_posizione (veicolo, data_ora, latitudine, longitudine) VALUES
 
 -- elencare tutte le posizioni di un veicolo comprese tra due orari (anche di giorni diversi)
 
-SELECT * FROM 191125_posizione 
-	WHERE veicolo = 'ABC1234' 
-	AND data_ora BETWEEN '* 10:00:00' AND '* 12:00:00'
+SELECT * FROM 191125_posizione
+	WHERE veicolo = 'ABC1234'
+	AND data_ora BETWEEN '19:00:00' AND '24:00:00'
 	ORDER BY data_ora;
