@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta author="Basso Nicola 5^AI">
+        <title>Terna Pitagorica</title>
+        <link rel="stylesheet" type="text/css" href="Basso_test_terna_pitagorica.css">
+        <script src="Basso_test_terna_pitagorica.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Verifica se i tre numeri formano una terna pitagorica</h1>
+            <p>Dati tre numeri interi a, b, e c, inseriti dall'utente, formano una terna pitagorica tale che: a**2 + b**2 = c**2</p>
+        </div>
+        <div class="content">
+            <div class="input_field">
+                <span>a = </span><input type="text" name="a" value="0" id="a"><br>
+                <span>b = </span><input type="text" name="b" value="0" id="b"><br>
+                <span>c = </span><input type="text" name="c" value="0" id="c"><br>
+                <button type="button" name="button" onClick="verifica_valori()">Verifica</button>
+            </div>
+            <div class="result">
+                <p>I tre valori sono una terna pitagorica?</p>
+                <input disabled type="text" name="result" value=" " id="ris">
+            </div>
+        </div>
+        <div class="footer">
+            Copyright (c) 2019<br>This website is under <a href="https://opensource.org/licenses/MIT">MIT</a> License
+        </div>
+    </body>
+</html>
