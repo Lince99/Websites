@@ -1,0 +1,125 @@
+# PHP
+
+## INDICE
+1. [Introduzione](#Introduzione)
+1. [Linguaggio PHP](#PHP)
+1.
+
+###### Link utili
+
+https://www.e-fermi.it/moodle27/mod/page/view.php?id=164  
+https://www.e-fermi.it/moodle27/course/view.php?id=31#section-0  
+
+---
+
+## Introduzione
+
+PHP è spesso usato assieme altri software in pacchetti come LAMP e WAMP per la creazione di siti dinamici.  
+XAMPP è una piattaforma di gestione di siti web dinamici da installare sul server.
+
+![Funzionamento sito web](https://www.e-fermi.it/moodle27/pluginfile.php/1924/mod_page/content/1/ComeFunzionaSitoDinamicoSmall.jpg)
+
+### PHP
+
+> Acronimo ricorsivo: _PHP: Hypertext Preprocessor_
+
+Linguaggio di programmazione statico che compila il codice e lo esegue riga per riga (interpreta)
+
+Genera una pagina HTML e se serve effettua connessioni con il database del server.
+
+Ad ogni caricamento di una pagina web tramite un browser vengono processati: dati statici, dati dinamici e query.
+
+
+
+[Torna all'indice](#INDICE)
+
+### Programmazione
+
+[www.w3schools.com/php](https://www.w3schools.com/php/)
+
+- Sintassi simile al C (**;** official fanclub member)
+- Serve per sviluppare applicazioni web
+- Estensione: **.php**
+- Funzioni php possono essere inserite in un qualsiasi punto della pagina HTML
+
+Pagina di esempio:
+```php
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h1>My first PHP page</h1>
+
+        <?php
+        echo "Hello World!";
+        ?>
+
+    </body>
+</html>
+```
+
+Si utilizza **<?php** per aprire il tag e **?>** per chiuderlo.
+
+#### Stampa di dati
+
+```php
+echo "Hello World!";
+```
+
+oppure
+
+```php
+print "<b>Hello World!</b>";
+```
+
+Nella stampa si possono mettere tag HTML come in javascript.
+
+#### Variabili
+
+Le variabili non devono per forza essere dichiarate e non richiedono il tipo di dato (però dichiararle fa sempre bene al debug :3 ).
+
+**Le variabili sono case-sensitive!!!**
+
+```php
+$variabile = 0;
+```
+
+Esempio di stampa
+
+```php
+<?php
+    $a = 5;
+    echo "a = $a";
+    //oppure
+    echo "a = " . $a;
+?>
+```
+
+#### Commenti
+
+```php
+//commento a linea singola
+# commento a linea singola
+/*
+commento
+multilinea
+*/
+echo "Hello" /*Commento nel codice */ . " World!";
+```
+
+#### Loop
+
+```php
+$max = 10;
+for($i = 0; $i < $max; $i++)
+    //do stuff
+```
+
+---
+
+[Torna all'indice](#INDICE)
+
+## TODO
+
+- [x] Pagina PHP con ciclo for da mettere sul server contabile in public_html _/home/local/FERMI/NOMEUTENTE/public_html_ e visualizzarlo all'indirizzo: http://contabile.fermi.intra/~s01118
+- [ ] Riadattare esercizio javascript con Fibonacci e tavola pitagorica https://www.e-fermi.it/moodle27/mod/assign/view.php?id=17554
