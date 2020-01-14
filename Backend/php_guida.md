@@ -19,6 +19,23 @@ XAMPP è una piattaforma di gestione di siti web dinamici da installare sul serv
 
 ![Funzionamento sito web](https://www.e-fermi.it/moodle27/pluginfile.php/1924/mod_page/content/1/ComeFunzionaSitoDinamicoSmall.jpg)
 
+### Laboratorio a scuola e passaggi
+
+Il server a scuola fornisce una cartella per ogni studente e bisogna caricare il file con sftp (sostituire NOMEUTENTE con il proprio nome s0xxxx)
+
+```bash
+sftp NOMEUTENTE@contabile.fermi.intra #inserire la password di NOMEUTENTE
+lpwd #per vedere dove si è nel client
+lcd #per spostarsi nel client
+lls #per vedere cosa si ha nella cartella corrente del client
+pwd #per vedere dove si è nel server
+cd #per spostarsi nel server
+put nomefile.php .
+```
+
+Cartella dei file: /home/local/NOMEUTENTE/public_html
+Pagina web: http://contabile.fermi.intra/~NOMEUTENTE/nomefile.php
+
 ### PHP
 
 > Acronimo ricorsivo: _PHP: Hypertext Preprocessor_
@@ -114,6 +131,10 @@ $max = 10;
 for($i = 0; $i < $max; $i++)
     //do stuff
 ```
+
+#### Funzioni
+
+todo
 
 ---
 
