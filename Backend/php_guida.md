@@ -134,7 +134,69 @@ for($i = 0; $i < $max; $i++)
 
 #### Funzioni
 
-todo
+```php
+<html>
+    <?php
+
+    function somma($a, $b)
+    {
+    	return ($a + $b);
+    }
+
+    ?>
+    <head>
+        <title>Prova funzione</title>
+    </head>
+    <body>
+    	<?php
+        	$valore1 = 10;
+        	$valore2 = 42;
+        	print("valore1 = $valore1<br>");
+        	print("valore2 = $valore2<br>");
+        	$somma = somma($valore1, $valore2);
+        	print("somma = $somma<br>");
+    	?>
+    </body>
+</html>
+```
+
+### Form
+
+In PHP si utilizzano i form per ottenere dati dagli utenti, sia in chiaro che criptati.
+
+Esempio w3c:
+
+```html
+<html>
+<body>
+
+<form action="welcome_get.php" method="get">
+Name: <input type="text" name="name"><br>
+E-mail: <input type="text" name="email"><br>
+<input type="submit">
+</form>
+
+</body>
+</html>
+```
+
+```php
+<html>
+<body>
+
+Welcome <?php echo $_GET["name"]; ?><br>
+Your email address is: <?php echo $_GET["email"]; ?>
+
+</body>
+</html>
+```
+
+Per ottenere i dati si usano le variabili globali **$_GET** e **$_POST**:
+- $_GET è un'array di variabili passate allo script con i parametri nell'URL.
+    - dati in chiaro, usato per inviare dati non sensibili e salvare i dati come segnalibro.
+- $_POST è un'array di variabili passate attraverso il metodo HTTP POST.
+    - usato per dati sensibili come file e password.
+
 
 ---
 
