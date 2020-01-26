@@ -10,7 +10,7 @@ visualizzandolo assieme al riepilogo di tutti i dati inviati.
 - ore mensili
 - paga oraria
 
-##Output
+## Output
 
 - Stipendio calcolato
 - Input

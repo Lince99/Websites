@@ -10,7 +10,7 @@ a Javascript mediante la funzione sqrt.
 
 - lunghezza cateti
 
-##Output
+## Output
 
 - lunghezza ipotenusa
 - Input

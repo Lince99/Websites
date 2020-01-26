@@ -10,8 +10,8 @@
         </div>
         <div class="user_form">
             <form class="" action="calcolastipendio.php" method="post">
-                Primo cateto:<input type="text" name="nome" value="Mario"><br>
-                Secondo cateto:<input type="number" name="ore_mensili" value="0"><br>
+                Primo cateto (altezza):<input type="number" name="cat1" value="0"><br>
+                Secondo cateto (lunghezza):<input type="number" name="cat2" value="0"><br>
                 <button type="submit" name="submit">Invia</button>
             </form>
         </div>

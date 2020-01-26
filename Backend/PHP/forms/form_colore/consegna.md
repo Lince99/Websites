@@ -8,11 +8,9 @@ e visualizzarla col colore di sfondo prescelto.
 
 ## Input
 
-- colore
-    - stringa
-    - RGB
+- colore RGB
 
-##Output
+## Output
 
 - Pagina con sfondo colorato
 - complementare

@@ -6,13 +6,13 @@
     </head>
     <body>
         <div class="title">
-            <h1>Inserisci un colore:</h1>
+            <h1>Inserisci un colore (da 0 a 255):</h1>
         </div>
         <div class="user_form">
             <form class="" action="calcolastipendio.php" method="post">
-                Nome: <input type="text" name="nome" value="Mario"><br>
-                Ore mensili: <input type="number" name="ore_mensili" value="0"><br>
-                Paga Oraria: <input type="number" name="paga_oraria" value="0"><br>
+                R: <input type="number" name="red" value="0"><br>
+                G: <input type="number" name="green" value="0"><br>
+                B: <input type="number" name="blue" value="0"><br>
                 <button type="submit" name="submit">Invia</button>
             </form>
         </div>
