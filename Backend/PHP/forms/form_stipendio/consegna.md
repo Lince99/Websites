@@ -1,4 +1,4 @@
-#Es 1
+# Es 1
 
 Realizzare un form dove si chiedono nome, ore mensili lavorate e paga oraria
 di un lavoratore e calcolare lo stipendio,

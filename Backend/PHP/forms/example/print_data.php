@@ -18,5 +18,10 @@
         <hr>
         <p>GET list:<?php echo implode("|",$_GET); ?></p>
         <p>POST list:<?php echo implode("|",$_POST); ?></p>
+        <?php
+            include __DIR__ . "/../../Parsedown.php";
+            $Parsedown = new Parsedown();
+            echo $Parsedown->text('# Hello _Parsedown_!'); # prints: <p>Hello <em>Parsedown</em>!</p>
+        ?>
     </body>
 </html>

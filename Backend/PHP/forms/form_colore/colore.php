@@ -10,24 +10,28 @@
         </div>
         <div class="user_form">
             <form class="" action="cambiacolore.php" method="post">
-                R: <input type="number" name="red" value="0"><br>
-                G: <input type="number" name="green" value="0"><br>
-                B: <input type="number" name="blue" value="0"><br>
+                R: <input type="text" name="red" value="0" maxlength="2"><br>
+                G: <input type="text" name="green" value="0" maxlength="2"><br>
+                B: <input type="text" name="blue" value="0" maxlength="2"><br>
                 <button type="submit" name="submit">Invia</button>
             </form>
         </div>
         <div class="footer">
-            <pre style="margin-top:200px; background-color:gray; max-width:100%; word-wrap: break-word;">Consegna:
+            <p>Consegna:</p>
+            <div class="parsed_mardown" style="width:50%;">
                 <?php
-                // get contents of a file into a string
-                $filename = "consegna.md";
-                $handle = fopen($filename, "r");
-                $contents = fread($handle, filesize($filename));
-                if($contents)
-                    echo $contents;
-                fclose($handle);
+                    include __DIR__ . "/../../Parsedown.php";
+                    $Parsedown = new Parsedown();
+                    // get contents of a file into a string
+                    $filename = "consegna.md";
+                    $handle = fopen($filename, "r");
+                    $contents = fread($handle, filesize($filename));
+                    //print parsed markdown
+                    if($contents)
+                        echo $Parsedown->text($contents);
+                    fclose($handle);
                 ?>
-            </pre>
+            </div>
         </div>
     </body>
 </html>
