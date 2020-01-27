@@ -9,7 +9,7 @@
             <h1>Inserisci la lunghezza dei cateti</h1>
         </div>
         <div class="user_form">
-            <form class="" action="calcolastipendio.php" method="post">
+            <form class="" action="calcolacateti.php" method="post">
                 Primo cateto (altezza):<input type="number" name="cat1" value="0"><br>
                 Secondo cateto (lunghezza):<input type="number" name="cat2" value="0"><br>
                 <button type="submit" name="submit">Invia</button>

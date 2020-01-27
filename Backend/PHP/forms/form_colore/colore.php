@@ -9,7 +9,7 @@
             <h1>Inserisci un colore (da 0 a 255):</h1>
         </div>
         <div class="user_form">
-            <form class="" action="calcolastipendio.php" method="post">
+            <form class="" action="cambiacolore.php" method="post">
                 R: <input type="number" name="red" value="0"><br>
                 G: <input type="number" name="green" value="0"><br>
                 B: <input type="number" name="blue" value="0"><br>
