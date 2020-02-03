@@ -19,6 +19,28 @@ Relativamente alla cancellazione di un record e relativi messaggi utente sull'es
 
 ## Database
 
-Utente (ID, nome, cognome, indirizzo, telefono, dataNascita, email)
+utenteRubrica (ID, nome, cognome, indirizzo, telefono, dataNascita, email)
 
-PK = Utente.ID
+PK = utenteRubrica.ID
+
+
+### Queries
+
+```sql
+USE 5ai_19_20_s01118;
+
+CREATE TABLE IF NOT EXISTS `200203_utenteRubrica`(
+    ID INT(11) NOT NULL AUTO_INCREMENT,
+	nome VARCHAR(30) NOT NULL,
+	cognome VARCHAR(30) NOT NULL,
+	indirizzo VARCHAR(50) DEFAULT NULL,
+    telefono VARCHAR(16) NOT NULL,
+    dataNascita DATE DEFAULT NULL,
+    email VARCHAR(50) DEFAULT NULL,
+    PRIMARY KEY(ID)
+);
+
+INSERT INTO `200203_utenteRubrica`
+    (nome, cognome, indirizzo, telefono, dataNascita, email) VALUES
+    ('Mario', 'Mastroianni', 'Via Roma, 20', '+39 456 273 3456', '2008-11-11', 'email@email.com');
+```
