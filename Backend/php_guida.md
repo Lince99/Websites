@@ -197,6 +197,59 @@ Per ottenere i dati si usano le variabili globali **$_GET** e **$_POST**:
 - $_POST è un'array di variabili passate attraverso il metodo HTTP POST.
     - usato per dati sensibili come file e password.
 
+### Database
+
+Per connettersi ad un database MySql ci sono 2 modalità:
+1. MySQLi
+1. PDO
+
+#### Differenze
+
+PDO è compatibile con vari database mentre MySQLi funziona solo con i server MySQL
+
+
+#### MySQLi
+
+```php
+<?php
+    $servername = "contabile.fermi.intra";
+    $username = "nomeutente"; //modificare con il proprio
+    $password = "password"; //modificare con il proprio
+
+    //crea connessione
+    $connection = new mysqli($servername, $username, $password);
+
+    if($connection->connect_error) {
+        die("Connection failed".$connection->connect_error);
+    }
+    echo "Connected successfully";
+
+    //chiude la connessione
+    $connection->close();
+?>
+```
+
+#### PDO
+
+```php
+<?php
+    $servername = "localhost";
+    $username = "username";
+    $password = "password";
+
+    try {
+        $connection = new PDO("mysql:host=$servername;dbname=myDB", $username, $password);
+        // set the PDO error mode to exception
+        $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        echo "Connected successfully";
+    } catch(PDOException $e) {
+        echo "Connection failed: " . $e->getMessage();
+    }
+
+    //chiude la connessione
+    $conn = null;
+?>
+```
 
 ---
 
