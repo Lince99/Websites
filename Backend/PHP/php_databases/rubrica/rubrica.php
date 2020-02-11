@@ -36,7 +36,7 @@
                 <!-- Pulsante di connessione al db -->
                 <!-- TODO Pulsante di disconnessione dal db  (nasconde data_management) -->
                 <!-- Dati per connettersi al db (non molto sicuro)-->
-                <!--<form>
+                <!--<form action="rubrica.php" method="post">
                     <div class="form-group">
                         <label for="inputServer">Server</label>
                         <input type="text" class="form-control" id="inputServer">
@@ -64,6 +64,12 @@
                             $conn->close();
                         // Create connection
                         $conn = new mysqli($servername, $username, $password, $database_name);
+                        ?>
+                        <form action="rubrica.php" method="post">
+                            <button type="submit" class="btn btn-primary btn-danger" id="DisconnectButton">Disconnect</button>
+                        </form>
+                        <?php
+
 
                         // Check connection
                         if ($conn->connect_error) {
@@ -75,22 +81,18 @@
                         echo "<p>Connected successfully</p>";
 
                         //connect to database
+                        //echo "<p>$use_database</p>";
                         if ($conn->query($use_database) === TRUE) {
                             echo "<p>Personal database selected successfully</p>";
                         } else {
-                            ?>
-                            <script type="text/javascript">alert("Error entering database!");</script>
-                            <?php
                             echo "<p>Error selecting database: " . $conn->error . "</p>";
                         }
 
                         //create table
+                        //echo "<p>$q_create_table</p>";
                         if ($conn->query($q_create_table) === TRUE) {
                             echo "<p>Table Rubrica created successfully</p>";
                         } else {
-                            ?>
-                            <script type="text/javascript">alert("Error creating table!");</script>
-                            <?php
                             echo "<p>Error creating table: " . $conn->error . "</p>";
                         }
                     //}
@@ -109,13 +111,16 @@
                 <!-- Select dei dati -->
                 <?php
                     if($conn) {
+                        //echo "<p>$q_select_all</p>";
                         $select_result = $conn->query($q_select_all);
 
                         if ($select_result->num_rows > 0) {
                             // output data of each row
-                            while($row = $result->fetch_assoc()) {
-                                echo "id: " . $row["ID"]. " - Nome: " . $row["nome"]. " " . $row["cognome"]. " - Indirizzo: " . $row["indirizzo"]. " - Telefono: " . $row["telefono"]. " - Data di nascita: " . $row["dataNascita"]. " - Email: " . $row["email"]. "<br>";
+                            echo "<table class=\"table\"><tr> <th  scope=\"col\">id</th> <th scope=\"col\">nome</th> <th scope=\"col\">cognome</th> <th scope=\"col\">indirizzo</th> <th scope=\"col\">telefono</th> <th scope=\"col\">data di nascita</th> <th scope=\"col\">email</th>";
+                            while($row = $select_result->fetch_assoc()) {
+                                echo "<tr><th scope=\"row\"> " . $row["ID"]. "</th><th>" . $row["nome"]. "</th><th>" . $row["cognome"]. "</th><th>" . $row["indirizzo"]. "</th><th>" . $row["telefono"]. "</th><th>" . $row["dataNascita"]. "</th><th>" . $row["email"]."</th>";
                             }
+                            echo "</table>";
                         } else {
                             echo "<p>0 risultati</p>";
                         }
@@ -126,7 +131,7 @@
             <div class="container data_insert">
                 <h3>Data insert</h3>
                 <!-- Abilita opzione di modifica dei dati -->
-                <form>
+                <form action="rubrica.php" method="post">
                     <div class="form-group">
                         <label for="in_nome">Nome</label>
                         <input type="text" class="form-control" id="in_nome">
@@ -159,12 +164,10 @@
                         $in_dataNascita = $_POST['in_dataNascita'];
                         $in_email = $_POST['in_email'];
 
+                        //echo "<p>$q_insert_data</p>";
                         if ($conn->query($q_insert_data) === TRUE) {
                             echo "<p>New record created successfully</p>";
                         } else {
-                            ?>
-                            <script type="text/javascript">alert("Error insert into table!");</script>
-                            <?php
                             echo "<p>Error: " . $sql . "<br>" . $conn->error . "</p>";
                         }
                     }
@@ -173,7 +176,7 @@
             <!-- Abilita cancellazione delle righe -->
             <div class="containter data_remove">
                 <h3>Data remove</h3>
-                <form>
+                <form action="rubrica.php" method="post">
                     <div class="form-group">
                         <label for="remove_id">ID</label>
                         <input type="number" class="form-control" id="remove_id">
@@ -187,9 +190,6 @@
                         if ($conn->query($q_delete_row) === TRUE) {
                             echo "<p>Record deleted successfully</p>";
                         } else {
-                            ?>
-                            <script type="text/javascript">alert("Error delete into table!");</script>
-                            <?php
                             echo "<p>Error deleting record: " . $conn->error . "</p>";
                         }
                     }
