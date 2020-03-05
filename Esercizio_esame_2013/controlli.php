@@ -1,7 +1,6 @@
 <?php
 	include_once 'frontend/header.php';
 	include_once 'frontend/footer.php';
-	include_once 'frontend/controlli_management.php';
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +12,7 @@
     <body>
 
         <?php
-			include_once 'backend/dbconnect.php';
+			include_once 'backend/controlli_management.php';
 			print_controlli_title();
 			print_menu();
 		?>
@@ -42,42 +41,30 @@
 			<div class="tab-content">
 				<div class="tab-pane container active" id="controlli_home">
 					<div class="container-fluid">
+						<!-- tabella riassuntiva -->
 						<div class="table-responsive">
 							<table class="table table-striped table-borderless table-hover">
-							  <thead class="thead-dark">
-							    <tr>
-							      <th scope="col">#</th>
-							      <th scope="col">First</th>
-							      <th scope="col">Last</th>
-							      <th scope="col">Handle</th>
-							    </tr>
-							  </thead>
-							  <tbody>
-							    <tr>
-							      <th scope="row">1</th>
-							      <td>Mark</td>
-							      <td>Otto</td>
-							      <td>@mdo</td>
-							    </tr>
-							    <tr>
-							      <th scope="row">2</th>
-							      <td>Jacob</td>
-							      <td>Thornton</td>
-							      <td>@fat</td>
-							    </tr>
-							    <tr>
-							      <th scope="row">3</th>
-							      <td>Larry</td>
-							      <td>the Bird</td>
-							      <td>@twitter</td>
-							    </tr>
-							  </tbody>
+								<thead class="thead-dark">
+									<tr>
+										<th scope="col">#</th>
+										<th scope="col">Dogana</th>
+										<th scope="col">Addetto</th>
+										<th scope="col">Soggetto controllato</th>
+										<th scope="col">Data_inizio</th>
+										<th scope="col">Data_fine</th>
+										<th scope="col">Note</th>
+										<th scope="col">Dazio</th>
+										<th scope="col">Stato</th>
+									</tr>
+								</thead>
+								<tbody>
+									<?php
+										print_all_controlli();
+									?>
+								</tbody>
 							</table>
 						</div>
-
-						<?php
-							print_all_controlli();
-						?>
+						<!-- controlli -->
 					</div>
 				</div>
 				<div class="tab-pane container active" id="controlli_passeggeri">

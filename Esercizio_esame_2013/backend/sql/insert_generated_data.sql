@@ -1,0 +1,12 @@
+source generated_data/Aeroporto_insert.sql;
+source generated_data/Categoria_insert.sql;
+source generated_data/Segnalazione_insert.sql;
+source generated_data/Sequestro_insert.sql;
+source generated_data/Addetto_insert.sql;
+source generated_data/Dogana_insert.sql;
+source generated_data/Controllo_insert.sql;
+source generated_data/Merce_insert.sql;
+source generated_data/Passeggero_insert.sql;
+source generated_data/Squadra_controllo_insert.sql;
+source generated_data/Controllo_merce_insert.sql;
+source generated_data/Controllo_passeggero_insert.sql;
