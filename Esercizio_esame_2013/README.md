@@ -29,6 +29,14 @@ cd Esercizio_esame_2013
 ln -s ~/Repos/Websites/Esercizio_esame_2013 .
 ```
 
+Per avere dati generati per testare il database:
+
+```bash
+cd ~/Repos/Websites/Esercizio_esame_2013/backend/sql
+mysql -u www-data -p
+source insert_generated_data.sql
+```
+
 ## Meta
 
 Lince99

@@ -102,3 +102,44 @@ CREATE VIEW `Tutti_controlli` AS
     Controlli_solo_merce.Data_fine,
     Controlli_solo_merce.Esito AS `Stato`
     FROM Controlli_solo_merce;
+
+-- Selezione di tutti i passeggeri che sono stati controllati nella giornata "x" ordinati per punti di dogana
+DROP VIEW IF EXISTS `Lista_passeggeri`;
+
+-- Seleziona tutti i passeggeri con i rispettivi aeroporti
+CREATE VIEW `Lista_passeggeri` AS
+    SELECT table_from.Passaporto,
+    Cognome,
+    Nome,
+    Aeroporto_provenienza,
+    Aeroporto_destinazione,
+    Motivo_viaggio FROM
+        (SELECT Passeggero.Passaporto,
+        Passeggero.Cognome,
+        Passeggero.Nome,
+        Passeggero.Motivo_viaggio,
+        Aeroporto.Nome AS `Aeroporto_provenienza`
+        FROM Aeroporto, Passeggero
+        WHERE Passeggero.Aeroporto_provenienza = Aeroporto.ID) AS table_from
+    INNER JOIN
+        (SELECT Passeggero.Passaporto,
+        Aeroporto.Nome AS `Aeroporto_destinazione`
+        FROM Aeroporto, Passeggero
+        WHERE Passeggero.Aeroporto_destinazione = Aeroporto.ID) AS table_to
+    ON table_from.Passaporto = table_to.Passaporto;
+
+DROP VIEW IF EXISTS `Merce_sequestrata`;
+
+-- Merce controllata dall'inizio da una certa data in poi
+CREATE VIEW `Merce_sequestrata` AS
+    SELECT merce_controllata.Nome_merce,
+    merce_controllata.Quantita,
+    ctrl.Data_fine FROM
+        (SELECT Controllo_merce.Controllo,
+        Categorie_merce.Nome AS `Nome_merce`,
+        Categorie_merce.Quantita,
+        Controllo_merce.Esito AS `Esito_merce`
+        FROM Controllo_merce INNER JOIN Categorie_merce ON Controllo_merce.Merce = Categorie_merce.ID) AS merce_controllata
+        ,
+        (SELECT Controllo.ID, Controllo.Data_fine FROM Controllo) AS ctrl
+    WHERE merce_controllata.Controllo = ctrl.ID;

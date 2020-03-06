@@ -3,6 +3,8 @@
 
     $Q_create_database = "source sql/database.sql; source sql/select_multiple_controlli.sql";
 
+    $Q_insert_generated_data = "source sql/insert_generated_data.sql";
+
     $Q_use_database = "USE $DB_database_name;";
 
     $Q_select_all_controlli = "SELECT * FROM `Tutti_controlli`;";
