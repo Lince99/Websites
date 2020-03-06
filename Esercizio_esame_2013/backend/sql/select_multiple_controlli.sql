@@ -59,6 +59,7 @@ CREATE VIEW `Controlli_solo_passeggeri` AS
 -- Seleziona le varie categorie della merce
 CREATE VIEW `Categorie_merce` AS
     SELECT Merce.ID,
+    Merce.quantita,
     Categoria.Nome
     FROM Categoria INNER JOIN Merce ON Categoria.ID = Merce.Categoria;
 -- Seleziona la merce che e' stata controllata

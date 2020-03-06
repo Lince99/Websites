@@ -146,9 +146,71 @@
 					</div>
 				</div>
 				<div class="tab-pane container fade" id="controlli_merce">
-					<?php
-						print_lista_merce();
-					?>
+					<div class="container" style="margin-top:1em;">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<h2>Lista di tutta la merce controllata</h2>
+								<!-- controlli -->
+								<?php
+									print_buttons_general("#tabella_lista_merce");
+									print_buttons_filter("controlli.php#tabella_lista_merce", "#tabella_lista_merce");
+								?>
+							</div>
+						</div>
+						<hr>
+						<div class="container">
+							<!-- tabella riassuntiva -->
+							<div class="table-responsive table-fixed Custom_table_scrollable">
+								<table class="table table-striped table-borderless table-hover" cellspacing="0" width="100%">
+									<thead class="thead-dark">
+										<tr>
+											<th scope="col">#</th>
+											<th scope="col">Punto di controllo</th>
+											<th scope="col">Cognome addetto</th>
+											<th scope="col">Merce</th>
+											<th scope="col">Data inizio controllo</th>
+											<th scope="col">Data fine controllo</th>
+											<th scope="col">Esito</th>
+										</tr>
+									</thead>
+									<tbody id="tabella_lista_merce" class="collapse out">
+										<?php
+											print_lista_merce();
+										?>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="container" style="margin-top:1em;">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<h3>Merci respinte dall'inizio dell'anno</h3>
+								<!-- controlli -->
+								<?php print_buttons_general("#tabella_merce_respinta"); ?>
+							</div>
+						</div>
+						<hr>
+						<div class="container">
+							<!-- tabella riassuntiva -->
+							<div class="table-responsive table-fixed Custom_table_scrollable">
+								<table class="table table-striped table-borderless table-hover" cellspacing="0" width="100%">
+									<thead class="thead-dark">
+										<tr>
+											<th scope="col">Punto di controllo</th>
+											<th scope="col">Totale dei dazi</th>
+										</tr>
+									</thead>
+									<tbody id="tabella_merce_respinta" class="collapse out">
+										<?php
+											print_lista_merce_respinta();
+										?>
+									</tbody>
+								</table>
+								<p>Totale merce respinta: <?php print_totale_merce_respinta() ?></p>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="tab-pane container fade" id="controlli_contestazioni">
 					<?php

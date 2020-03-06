@@ -8,7 +8,7 @@
     $Q_select_all_controlli = "SELECT * FROM `Tutti_controlli`;";
 
     $Q_select_all_passeggeri = "SELECT * FROM `Passeggeri_controllati`;";
-    $Q_select_all_merce = "SELECT * FROM `Merce_controllata`;";
+    $Q_select_all_merce = "SELECT * FROM `Controlli_solo_merce`;";
 
     $QIN_data_inizio_controllo_passeggeri = "2011-12-31 01:02:03";
     $Q_select_passeggeri_giornata = "
@@ -37,6 +37,16 @@
         ORDER BY Dogana.Nome) AS `dogane`
     INNER JOIN Controllo
     GROUP BY dogane.Nome_dogana
-    ORDER BY dogane.Nome_dogana;
-";
+    ORDER BY dogane.Nome_dogana;";
+
+    $QIN_data_limite_merce_sequestrata = "1970-01-01 01:02:03";
+    $Q_select_merce_sequestrata_data = "
+    SELECT *
+    FROM Merce_sequestrata
+    WHERE Merce_sequestrata.Data_fine > ".$QIN_data_limite_merce_sequestrata.";
+    ";
+
+    $Q_totale_merce_sequestrata = "
+    SELECT SUM(Merce_sequestrata.Quantita) AS `Totale_quantita` FROM Merce_sequestrata;
+    ";
 ?>
