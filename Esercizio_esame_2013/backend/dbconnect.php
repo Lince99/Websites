@@ -19,16 +19,18 @@
     } else {
         ?>
         <!-- TODO: REMOVE THIS ON PRODUCTION -->
-        <div class="alert alert-success">
+        <div class="alert alert-success alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
             <strong>SUCCESS!</strong> Connected successfully to the database!
         </div>
         <?php
     }
 
-    if ($conn->query($use_database) === TRUE) {
+    if ($conn->query($Q_use_database) === TRUE) {
         ?>
         <!-- TODO: REMOVE THIS ON PRODUCTION -->
-        <div class="alert alert-success">
+        <div class="alert alert-success alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
             <strong>SUCCESS!</strong> Database selected successfully!
         </div>
         <?php
@@ -36,6 +38,28 @@
         ?>
         <div class="alert alert-danger">
             <strong>ERROR!</strong> Database selection failed!
+        </div>
+        <div class="alert alert-info">
+            <strong>Creating database...</strong>
+            <?php
+            if ($conn->query($Q_create_database) === TRUE) {
+                ?>
+                <div class="alert alert-success alert-dismissible">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>SUCCESS!</strong> Database created.
+                </div>
+                <?php
+                $conn->query($Q_use_database);
+            }
+            else {
+                ?>
+                <div class="alert alert-danger">
+                    <strong>ERROR!</strong> NO DATABASE, NO SERVICE :/
+                </div>
+                <?php
+                die("<p>Database creation failed: " . $conn->connect_error . "</p>");
+            }
+            ?>
         </div>
         <?php
     }
