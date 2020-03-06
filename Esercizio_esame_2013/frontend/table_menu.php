@@ -3,6 +3,7 @@
     function print_buttons_general($table_id='.table') {
         ?>
 <nav class="navbar navbar-inverse">
+        <!-- TODO -->
         <button type="button" class="btn btn-outline-warning">Modifica</button>
         <button type="button" class="btn btn-outline-danger">Elimina</button>
         <button type="button" class="btn btn-outline-success">Conferma modifiche</button>

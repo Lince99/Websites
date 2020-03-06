@@ -19,20 +19,20 @@
     } else {
         ?>
         <!-- TODO: REMOVE THIS ON PRODUCTION -->
-        <div class="alert alert-success alert-dismissible">
+        <!-- <div class="alert alert-success alert-dismissible">
             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
             <strong>SUCCESS!</strong> Connected successfully to the database!
-        </div>
+        </div> -->
         <?php
     }
 
     if ($conn->query($Q_use_database) === TRUE) {
         ?>
         <!-- TODO: REMOVE THIS ON PRODUCTION -->
-        <div class="alert alert-success alert-dismissible">
+        <!-- <div class="alert alert-success alert-dismissible">
             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
             <strong>SUCCESS!</strong> Database selected successfully!
-        </div>
+        </div> -->
         <?php
     } else {
         ?>
