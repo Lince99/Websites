@@ -144,6 +144,45 @@
 							</div>
 						</div>
 					</div>
+					<div class="container" style="margin-top:1em;">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<h2>Lista di tutti i passeggeri in stato di <bold>fermo</bold></h2>
+								<!-- controlli -->
+								<?php
+									print_buttons_general("#tabella_lista_passeggeri_fermi");
+									print_buttons_filter("controlli.php#tabella_lista_passeggeri_fermi", "#tabella_lista_passeggeri_fermi");
+								?>
+							</div>
+						</div>
+						<hr>
+						<div class="container">
+							<!-- tabella riassuntiva -->
+							<div class="table-responsive table-fixed Custom_table_scrollable">
+								<table class="table table-striped table-borderless table-hover" cellspacing="0" width="100%">
+									<thead class="thead-dark">
+										<tr>
+											<th scope="col">Nome dogana</th>
+											<th scope="col">Passaporto</th>
+											<th scope="col">Cognome</th>
+											<th scope="col">Nome</th>
+											<th scope="col">Aeroporto di provenienza</th>
+											<th scope="col">Aeroporto di destinazione</th>
+											<th scope="col">Motivo del viaggio</th>
+											<th scope="col">Data inizio controllo</th>
+											<th scope="col">Data fine controllo</th>
+											<th scope="col">Esito</th>
+										</tr>
+									</thead>
+									<tbody id="tabella_lista_passeggeri_fermi" class="collapse out">
+										<?php
+											print_lista_passeggeri_fermi();
+										?>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="tab-pane container fade" id="controlli_merce">
 					<div class="container" style="margin-top:1em;">
@@ -213,14 +252,70 @@
 					</div>
 				</div>
 				<div class="tab-pane container fade" id="controlli_contestazioni">
-					<?php
-						print_lista_contestazioni();
-					?>
+					<div class="container" style="margin-top:1em;">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<h3>Numero di contestazioni per addetto</h3>
+								<!-- controlli -->
+								<?php print_buttons_general("#tabella_contestazioni_passeggeri"); ?>
+							</div>
+						</div>
+						<hr>
+						<div class="container">
+							<!-- tabella riassuntiva -->
+							<div class="table-responsive table-fixed Custom_table_scrollable">
+								<table class="table table-striped table-borderless table-hover" cellspacing="0" width="100%">
+									<thead class="thead-dark">
+										<tr>
+											<th scope="col">#</th>
+											<th scope="col">Cognome addetto</th>
+											<th scope="col">Nome addetto</th>
+											<th scope="col">Numero di contestazioni effettuate</th>
+										</tr>
+									</thead>
+									<tbody id="tabella_contestazioni_passeggeri" class="collapse out">
+										<?php
+											print_lista_n_contestazioni();
+										?>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="tab-pane container fade" id="controlli_aperti">
-					<?php
-						print_controlli_aperti();
-					?>
+					<!-- TODO -->
+					<div class="container" style="margin-top:1em;">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<h3>Lista dei rapporti attualmente aperti</h3>
+								<!-- controlli -->
+								<?php print_buttons_general("#tabella_rapporti_aperti"); ?>
+							</div>
+						</div>
+						<hr>
+						<div class="container">
+							<!-- tabella riassuntiva -->
+							<div class="table-responsive table-fixed Custom_table_scrollable">
+								<table class="table table-striped table-borderless table-hover" cellspacing="0" width="100%">
+									<thead class="thead-dark">
+										<tr>
+											<th scope="col">#</th>
+											<th scope="col">Nome Dogana</th>
+											<th scope="col">Data_inizio</th>
+											<th scope="col">Note</th>
+											<th scope="col">Dazio</th>
+										</tr>
+									</thead>
+									<tbody id="tabella_rapporti_aperti" class="collapse out">
+										<?php
+											print_controlli_aperti();
+										?>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
         </div>

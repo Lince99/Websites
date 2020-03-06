@@ -7,7 +7,7 @@
         <button type="button" class="btn btn-outline-danger">Elimina</button>
         <button type="button" class="btn btn-outline-success">Conferma modifiche</button>
         <button type="button" class="btn btn-outline-info" data-toggle="collapse" data-target=" <?php echo $table_id ?> ">
-            Espandi <?php echo $table_id ?>
+            Espandi
         </button>
     </ul>
 </nav>

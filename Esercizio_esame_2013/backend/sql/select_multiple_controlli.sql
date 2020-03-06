@@ -22,7 +22,7 @@ CREATE VIEW `Addetti_squadre` AS
     SELECT Squadra_controllo.ID,
     Squadra_controllo.Controllo,
     Addetto.Cognome,
-    Addetto.Nome
+    Addetto.Nome,
     FROM Addetto INNER JOIN Squadra_controllo ON Addetto.ID = Squadra_controllo.Addetto;
 -- Seleziona le squadre che hanno effettuato controlli
 CREATE VIEW `Squadre_controlli` AS

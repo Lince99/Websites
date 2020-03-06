@@ -83,6 +83,40 @@
         }
     }
 
+    function print_lista_passeggeri_fermi() {
+        global $conn;
+        global $Q_select_passeggeri_fermi;
+        global $QIN_data_inizio_controllo_fermi;
+
+        $select_result = $conn->query($Q_select_passeggeri_fermi);
+        if ($select_result->num_rows > 0) {
+            while($row = $select_result->fetch_assoc()) {
+                ?>
+<tr>
+    <th scope="row"><?php echo $row["Nazionalita"] ?></th>
+    <td><?php echo $row["Cognome"] ?></td>
+    <td><?php echo $row["Nome"] ?></td>
+    <td><?php echo $row["Passaporto"] ?></td>
+    <td><?php echo $row["Note"] ?></td>
+</tr>
+                <?php
+            }
+        }
+        else {
+            //stampa una riga vuota se non ci sono dati
+            ?>
+<tr>
+    <th scope="row">&nbsp;</th>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+            <?php
+        }
+    }
+
     //estrae la somma dei dazi
     function print_dazi_doganali() {
         global $conn;
@@ -152,13 +186,14 @@
         global $Q_select_merce_sequestrata_data;
         global $QIN_data_limite_merce_sequestrata;
 
+
         $select_result = $conn->query($Q_select_merce_sequestrata_data);
         if ($select_result->num_rows > 0) {
             while($row = $select_result->fetch_assoc()) {
                 ?>
 <tr>
-    <th scope="row"><?php echo $row["Nome_dogana"] ?></th>
-    <td><?php echo $row["Totale"] ?></td>
+    <th scope="row"><?php echo $row["Nome_merce"] ?></th>
+    <td><?php echo $row["Quantita"] ?></td>
 </tr>
                 <?php
             }
@@ -198,9 +233,67 @@
         }
     }
 
-    function print_lista_contestazioni() {
-    }
-    function print_controlli_aperti() {
+    function print_lista_n_contestazioni() {
+        global $conn;
+        global $Q_n_contestazioni_per_addetto;
 
+
+        $select_result = $conn->query($Q_n_contestazioni_per_addetto);
+        if ($select_result->num_rows > 0) {
+            while($row = $select_result->fetch_assoc()) {
+                ?>
+<tr>
+    <th scope="row"><?php echo $row["ID_Addetto"] ?></th>
+    <td><?php echo $row["Cognome"] ?></td>
+    <td><?php echo $row["Nome"] ?></td>
+    <td><?php echo $row["N_Contestazioni"] ?></td>
+</tr>
+                <?php
+            }
+        }
+        else {
+            //stampa una riga vuota se non ci sono dati
+            ?>
+<tr>
+    <th scope="row">&nbsp;</th>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+            <?php
+        }
+    }
+
+    function print_controlli_aperti() {
+        global $conn;
+        global $Q_rapporti_aperti;
+
+
+        $select_result = $conn->query($Q_rapporti_aperti);
+        if ($select_result->num_rows > 0) {
+            while($row = $select_result->fetch_assoc()) {
+                ?>
+<tr>
+    <th scope="row"><?php echo $row["ID"] ?></th>
+    <td><?php echo $row["Nome"] ?></td>
+    <td><?php echo $row["Data_inizio"] ?></td>
+    <td><?php echo $row["Note"] ?></td>
+    <td><?php echo $row["Dazio"] ?></td>
+</tr>
+                <?php
+            }
+        }
+        else {
+            //stampa una riga vuota se non ci sono dati
+            ?>
+<tr>
+    <th scope="row">&nbsp;</th>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+</tr>
+            <?php
+        }
     }
 ?>
